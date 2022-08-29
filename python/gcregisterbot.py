@@ -76,7 +76,7 @@ def register(message):
     arg = extract_arg(message.text)
 
     if arg:
-        if len(arg) >> 1:
+        if len(arg) > 1:
             bot.send_message(message.chat.id, "使用方法：/register <用户名>")
         else:
             if entropy(arg[0]) < 3:
